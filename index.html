@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+  <meta name="viewport" content="width=device-width"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="x-apple-disable-message-reformatting">  
+
+  <title>Home eSure</title>
+  <!--[if mso]>
+    <style>
+      * {
+        font-family: Arial, sans-serif !important;
+      }
+    </style>
+  <![endif]-->
+  <!-- CSS Reset -->
+  <style type="text/css">
+
+  .ReadMsgBody { width: 100%; }
+  .ExternalClass { width: 100%; }
+  .ExternalClass * { line-height: 100%; }
+  p { margin: 1em 0; }
+  table td { border-collapse: collapse; }
+  @-ms-viewport {
+  width: device-width;
+  }
+  a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; 
+  }
+
+  html,
+  body {
+  margin: 0 auto !important;
+  padding: 0 !important;
+  height: 100% !important;
+  width: 100% !important;
+  }
+
+  /* What it does: Stops email clients resizing small text. */
+  * {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+  }
+
+  /* What it does: Centers email on Android 4.4 */
+  div[style*="margin: 16px 0"] {
+      margin:0 !important;
+  }
+
+  /* What it does: Stops Outlook from adding extra spacing to tables. */
+  table,
+  td {
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+  }
+
+  /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+  table {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    margin: 0 auto !important;
+  }
+  table table table {
+    table-layout: auto;
+  }
+
+  /* What it does: Uses a better rendering method when resizing images in IE. */
+  img {
+     -ms-interpolation-mode:bicubic;
+  }
+
+  /* What it does: A work-around for iOS meddling in triggered links. */
+  *[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  /* What it does: A work-around for Gmail meddling in triggered links. */
+  .x-gmail-data-detectors,
+  .x-gmail-data-detectors *,
+  .aBn {
+      border-bottom: 0 !important;
+      cursor: default !important;
+  }
+
+  /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+  .a6S {
+    display: none !important;
+    opacity: 0.01 !important;
+  }
+  /* If the above doesn't work, add a .g-img class to any image in question. */
+  img.g-img + div {
+    display:none !important;
+  }
+
+  /* What it does: Prevents underlining the button text in Windows 10 */
+  .button-link {
+    text-decoration: none !important;
+  }
+
+  @media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
+    .email-container {
+      min-width: 375px !important;
+    }
+  }
+
+    /* Banner Class */
+    .p-lb{
+      padding: 0px 0px 10px 0px; 
+    }
+    .p-custom{
+      padding:20px 0px 0px 0px; 
+    } 
+    /*This resolves the Outlook 07, 10, and Gmail td padding issue fix*/
+    table td {
+      border-collapse: collapse;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+    .ExternalClass * {
+      line-height: 100%;
+    }
+    /*Yahoo paragraph fix*/
+    p {
+      margin: 1em 0;
+    }
+    body {
+      -webkit-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      font-family: arial;
+      font-family: arial;
+    }
+    /*This resolves the Outlook 07, 10, and Gmail td padding issue fix*/
+    table td {
+      border-collapse: collapse;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+    }
+    table {
+      border-collapse: collapse; 
+      border-spacing: 0; 
+      mso-table-lspace: 0pt; 
+      mso-table-rspace: 0pt;
+    }
+
+    table td {
+      border-collapse: collapse;
+    }
+
+    img {
+      -ms-interpolation-mode: bicubic; 
+    }
+    p {
+      margin: 0;
+    }
+    a[href^=tel] {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a[href^=mailto] {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+     .fluidImage {
+      width: 100% !important;
+      height: auto !important;
+    }
+    *[class] .mobile-drop,
+    *[class].mobile-drop,
+    .mobile-drop {
+      max-height:0; /* Gmail*/
+      display:none!important; /* Generic*/
+      mso-hide:all; /* Outlook clients*/
+      overflow:hidden!important; /* Generic */
+      opacity: 0!important; /* Android */
+      max-height: 0;
+      font-size: 0;
+      width: 0;
+      line-height: 0;
+    }
+
+    /* Helpers */
+
+    *[class] .text_p {
+      width: 0px !important;
+    }
+
+    @media only screen and (max-width: 520px) {
+ 
+      *[class] .mobile-center {
+        text-align: center !important;
+        margin: 0 auto !important;
+        float: none !important;
+      }
+
+      td.mobile-center {
+        text-align: center !important;
+        margin: 0 auto !important;
+        float: none !important;
+      }
+
+      *[class] .mobile-gutter {
+        width: 20px !important;
+      }
+      *[class] .text_p {
+        width: 20px !important;
+      }
+
+      /* Mobile behaviour */
+      *[class] .desktop-only,
+      .desktop-only {
+        display: none;
+        max-height:0; /* Gmail*/
+        display:none; /* Generic*/
+        mso-hide:all; /* Outlook clients*/
+        overflow:hidden; /* Generic */
+      }
+
+      *[class] .mobile-drop,
+      *[class].mobile-drop,
+      .mobile-drop {
+        display: block!important;
+        width: 100%;
+        clear: both;
+        overflow: visible!important;
+        max-height:100%; /* Gmail*/
+        mso-hide:all !important; /* Outlook clients */
+        opacity: 1!important; /* Android */
+        display: block !important;
+        width: auto !important;
+        overflow: visible !important;
+        max-height: none !important;
+        font-size: inherit !important;
+        line-height: inherit !important; 
+      }
+
+      *[class] .mobile-inline {
+        display: inline !important;
+      }
+      
+
+      .p-lb{
+        padding: 0px 0px 20px 0px;
+      }
+      .p-custom{
+        padding:20px 0px 0px 0px; 
+      } 
+      .fluid {
+        max-width: 100% !important;
+        height: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      .full-wid,
+      .full-wid-center {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+        text-align: center !important;
+      }
+      
+      .mobile-center{
+        text-align: center !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: none !important;
+      }
+      table.mobile-center{
+        display: inline-block !important;
+      }
+      .mobile_bc{
+        background-color: #E9F6FE;
+      }
+      .mobile_obg{
+        background-color: #f9f6f9; 
+      }
+    }
+
+  </style>
+  <!--[if gte mso 9]>
+  <style>
+  .outlookfix{font-size:0%; line-height:0;}
+  </style>
+  <![endif]-->
+
+</head>
+
+
+
+<body bgcolor="#FFFFFF" style="margin: 0px; padding:0px; -webkit-text-size-adjust:none; -ms-text-size-adjust: none;" yahoo="fix">
+<table align="center" cellpadding="0" cellspacing="0" class="full-wid-center" width="600">
+  <tbody>
+    <tr class="outlookfix">
+      <td align="left" class="desktop-only">&nbsp;</td>
+      <td align="center" class="full-wid-center" width="600">
+        <!-- main content -->
+        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+         <!-- Brand Heading Begin-->
+          <tr>
+            <td align="center">
+              <!-- Header -->
+              <table cellpadding="0" cellspacing="0" width="100%" align="center" bgcolor="#00568e">
+                <tr>
+                  <td class="mobile-gutter" width="20"></td>
+                  <td align="center" valign="top">
+                    <table cellpadding="0" cellspacing="0" class="full-wid-center" width="600" align="center">
+                      <tbody>
+                        <tr class="outlookfix">
+                          <td height="20" style="font-size:10px; line-height:10px;"> </td>
+                        </tr>
+                        <tr class="outlookfix">
+                          <td align="middle">
+                            <table border="0" cellpadding="0" cellspacing="0" class="full-wid-center" width="600">
+                              <tr>
+                                <td align="left" width="280">
+                                  <table border="0" cellpadding="0" cellspacing="0" width="100%" align="left">
+                                    <tr>
+                                      <td>
+                                        <div style="float: left;">
+                                          <a alias="logo" href="http://www.esure.com" target="_blank"><img alt="esure" border="0" width="120" height="26" src="images/assets/esure/logos/esure.png" style="margin:0; padding:0; border:none; display:block;" border="0"></a>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                               <td align="right" width="130">
+                                  <table border="0" cellpadding="0" cellspacing="0" width="130">
+                                     <tr>
+                                        <td align="right" valign="middle">
+
+                                          <!--[if (gte mso 9)|(IE)]>
+                                          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                          <tr>
+                                          <td valign="top" width="20%">
+                                          <![endif]-->
+                                           
+                                          <!-- LEFT TABLE -->
+                                          <table align="middle" border="0" cellpadding="0" cellspacing="0" style="display: inline-block;" width="30">
+                                              <tr>
+                                                <td>
+                                                  <div style="width: 30px">
+                                                    <img src="images/assets/esure/logos/view_online_icon.png" alt="view in browser" style="display: block;" border="0">
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                          </table> 
+
+                                          <!--[if (gte mso 9)|(IE)]>
+                                          </td>
+                                          <td valign="top" width="80%">
+                                          <![endif]-->
+
+                                          <!-- RIGHT TABLE -->
+                                          <table align="middle" border="0" cellpadding="0" cellspacing="0" style="display:inline-block;" width="80">
+                                              <tr>
+                                                <td>
+                                                  <div style="width: 80px; padding: 3px 0;">
+                                                    <a alias="" href="%%view_email_url%%" style="font-size:14px; line-height:23px; font-weight:normal; text-decoration:none; color:#bcddf7; font-family: Arial, sans-serif;line-height:12px;" target="_blank">View online </a>
+                                                  </div>
+                                                </td>
+                                              </tr>
+                                          </table>
+
+                                          <!--[if (gte mso 9)|(IE)]>
+                                          </td>
+                                          </tr>
+                                          </table>
+                                          <![endif]-->
+
+                                        </td>
+                                      </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr class="outlookfix">
+                          <td height="10" style="font-size:10px; line-height:10px;"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                  <td class="mobile-gutter" width="20"></td>
+                </tr>
+              </table>
+              <!-- Header End -->
+            </td>
+          </tr>
+         <!-- Brand Heading End-->
+         <!-- Home Insurance Heading Begin-->  
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" width="100%" align="center" bgcolor="#96cefb">
+                <tr>
+                  <td width="20" class="mobile-gutter"></td>
+
+                  <td>
+                    <table cellpadding="0" cellspacing="0" class="full-wid-center" width="600" align="center">
+                        <tr>
+                          <td height="10" style="font-size:10px; line-height:10px;"></td>
+                        </tr>
+                        <tr align="left">
+
+                          <td valign="top">
+                            <a alias="" href="http://www.esure.com/home-insurance" style="font-size:14px; line-height:23px; font-weight:bold; text-decoration:none; text-align: left; font-family: Arial, sans-serif; color:#0072af;" target="_blank">
+                              <font style="font-family: Arial, sans-serif;font-size:18px;color:#0072af;text-decoration:none; font-weight: lighter;"><span style="font-size: 18px; font-weight: bold;">Home</span>&nbsp;Insurance</font>
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td height="10" style="font-size:10px; line-height:10px;"></td>
+                        </tr>
+                    </table>
+                  </td>
+                  <td width="20" class="mobile-gutter"></td>
+                </tr>
+              </table> 
+            </td>
+          </tr>
+         <!-- Home Insurance Heading End-->  
+
+         <!-- Policy Number Heading Begin-->  
+          <tr>
+            <td>
+              <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"  bgcolor="#E9F6FE">
+                <tbody>
+                  <tr>
+                    <td height="5" style="font-size:5px; line-height:5px;"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" valign="top">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                      <tbody>
+                        <tr>
+                          <td width="20" class="mobile-gutter"></td>
+                          <!-- Column : BEGIN -->
+                          <td class="full-wid-center">
+                            <table cellspacing="0" cellpadding="0" border="0" class="full-wid-center" align="left">
+                              <tbody>
+                                <tr>
+                                  <td valign="top" width="100%">
+                                    <a alias="" href="http://www.esure.com/home-insurance" style="border:none; text-decoration: none;" target="_blank">
+                                      <font style="font-family: Arial, sans-serif;font-size:14px;color:#0072af;text-decoration:none; font-weight: lighter;"><span style="font-size: 14px; font-weight: bold;">Policy Number:</span>&nbsp;XXXXX</font>
+                                    </a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <!-- Column : END -->
+                          <!-- Column : BEGIN -->
+                          <td class="full-wid-center">
+                            <table  cellspacing="0" cellpadding="0" border="0" class="full-wid-center" align="right">
+                              <tbody>
+                                <tr>
+                                  <td valign="top" width="100%">
+                                    <table  cellspacing="0" cellpadding="0" border="0">
+                                      <tbody>
+                                        <tr>
+                                          <td valign="top" >
+                                            <font style="font-family: Arial, sans-serif;font-size:14px;color:#0072af;text-decoration:none; font-weight: lighter;"><span style="font-size: 14px; font-weight: bold;">Postcode:</span>&nbsp;XXXX XXX</font>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <!-- Column : END -->
+                          <td width="20" class="mobile-gutter"></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="5" style="font-size:5px; line-height:5px;"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+         <!-- Policy Number Heading End-->
+
+         <!-- Header Banner Begin-->  
+          <tr>
+            <td>
+              <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tbody>
+                  <tr>
+                    <td bgcolor="#ffffff" align="center" valign="top" style="padding: 10px;">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                      <tbody>
+                        <tr>
+                          <!-- Column : BEGIN -->
+                          <td class="full-wid-center">
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                              <tbody>
+                                <tr>
+                                  <td style="padding: 0px 30px 10px; text-align: center;">
+                                  <img src="images/assets/esure/hero/esure_hero_home.jpg" width="260" height="241" alt="Home Icon" border="0" class="fluidImage" style="height: auto;" />
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <!-- Column : END -->
+                          <!-- Column : BEGIN -->
+                          <td class="full-wid-center">
+                            <table cellspacing="0" cellpadding="0" border="0">
+                              <tbody>
+                                <tr>
+                                  <td style="text-align: center;">
+                                  <table align="right" cellspacing="0" cellpadding="0" border="0">
+                                    <tbody>
+                                      <tr valign="middle">
+                                        <!--[if mso]><td width="20"></td><![endif]-->
+                                        <td style="text-align: center;">
+                                        <!-- Box content : BEGIN -->
+                                        <div style="width: 260px;">
+                                        <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                          <tbody>  
+                                            <tr>
+                                              <td class="p-custom">
+                                                <font style="text-align: center; font-family: Arial, sans-serif; font-size: 26px; line-height: 36px; color:#0072af; font-weight: bold;">Welcome to esure,</font>
+                                                <font style="text-align: center; font-family: Arial, sans-serif; font-size: 26px; line-height: 32px; color:#0072af; font-weight: lighter;">
+                                                  we're glad to have you onboard!
+                                                </font>
+                                              </td>
+                                            </tr>
+                                            <tr>
+                                              <td height="30" style="height: 30px;"></td>
+                                            </tr>
+                                            <tr>
+                                              <td class="mobile-center">
+                                              <!-- Button : BEGIN -->
+                                              <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" >
+                                                <tbody>
+                                                  <tr>
+                                                    <td style="border-radius: 5px; background: #8cb941; text-align: center;">
+                                                    <a href="#" style="border: 15px solid #8cb941; font-family: Arial; font-size: 16px; text-align: center; text-decoration: none; display: block; border-radius: 5px; font-weight: 100; letter-spacing: 1px;" class="button-a"><span style="color: #ffffff;">Sign in to<strong> My Account</strong>&nbsp;>></span></a>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                              <!-- Button : END -->
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                         
+                                        </div>
+                                        <!-- Box content : END -->
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <!-- Column : END -->
+                        </tr>
+                      </tbody>
+                    </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <!-- Header Banner End--> 
+  
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" width="100%" align="center">
+                <tr>
+                  <td class="mobile-gutter" width="20"></td>
+                  <td align="left" class="mobile-center"><font style="font-family: Arial, sans-serif;font-size:20px;line-height:30px;color:#0072af;font-weight:bold;">Hello %%firstname%%,</font>
+                  </td>
+                  <td class="mobile-gutter" width="20"></td>
+                </tr>
+                <tr>
+                  <td height="15" style="height: 15px;"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <table cellpadding="0" width="100%" cellspacing="0">
+                <tr>
+                  <td class="mobile-gutter" width="20"></td>
+                  <td>
+                    <table cellpadding="0" width="100%" cellspacing="0">
+                      <tr>
+                        <td align="left">
+                          <font style="font-family: Arial, sans-serif; font-size: 16px; color: #0072af; text-decoration: none; line-height:23px;">Thank you for insuring your <span style="font-weight: bold;">home</span> with esure. So now you're all set up, you can relax knowing you’re in safe hands. Should you need us, we're here to help and put things right. 
+                          </font>
+                        </td>
+                      </tr> 
+                    </table>
+                  </td>
+                  <td class="mobile-gutter" width="20"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td height="15" style="height: 15px;"></td>
+          </tr>
+          <tr>
+            <td>
+              <table cellpadding="0" width="100%" cellspacing="0">
+                <tr>
+                  <td class="mobile-gutter" width="20"></td>
+                  <td>
+                    <table cellpadding="0" width="100%" cellspacing="0">
+                      <tr>
+                        <td align="left">
+                          <font style="font-family: Arial, sans-serif; font-size: 16px; color: #0072af; text-decoration: none; line-height:23px; font-weight: bold;">What you need to do now
+                          </font>
+                        </td>
+                      </tr> 
+                    </table>
+                  </td>
+                  <td class="mobile-gutter" width="20"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td height="15" style="height: 15px;"></td>
+          </tr>
+          <tr>
+            <td>
+              <table cellpadding="0" width="100%" cellspacing="0">
+                <tr>
+                  <td>
+                    <table border="0" cellpadding="10" cellspacing="0">
+                      <tr>
+                        <td class="mobile-gutter" width="5"></td>
+                        <td valign="top">
+                          <table border="0" cellpadding="5" cellspacing="0">
+                            <tr>
+                              <td><img src="images/assets/esure/num/1.png" width="27"></td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td>
+                          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td align="left" valign="top">
+                                <font style="font-family: Arial;font-size:16px;line-height:23px;color:#0072af;font-weight:normal">Sign in to<a href="#" style="text-decoration: underline; color: #f38c1e; cursor: pointer;"> My Account</a> using the <span style="font-weight: bold;">temporary password</span> that we've sent you in a separate email. If you've already set up My Account you can sign in using your usual password.</font>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table border="0" cellpadding="10" cellspacing="0">
+                      <tr>
+                       <td class="mobile-gutter" width="5"></td>
+                        <td valign="top">
+                          <table border="0" cellpadding="5" cellspacing="0">
+                            <tr>
+                              <td><img src="images/assets/esure/num/2.png" width="27"></td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td>
+                          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td align="left" valign="top">
+                                <font style="font-family: Arial;font-size:16px;line-height:23px;color:#0072af;font-weight:normal">
+                                 Check your <span style="font-weight: bold;">Home Insurance Schedule</span> and call Customer Service if any information is incorrect or changes throughout the year, as this could lead you to be uninsured, your policy cancelled or a claim rejected or reduced. </font>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <table border="0" cellpadding="10" cellspacing="0">
+                      <tr>
+                       <td class="mobile-gutter" width="5"></td>
+                        <td valign="top">
+                          <table border="0" cellpadding="5" cellspacing="0">
+                            <tr>
+                              <td><img src="images/assets/esure/num/3.png" width="27"></td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td>
+                          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td align="left" valign="top">
+                                <font style="font-family: Arial;font-size:16px;line-height:23px;color:#0072af;font-weight:normal">
+                                    Check the <span style="font-weight: bold;">Insurance Product Information Document</span> and <span style="font-weight: bold;">Policy Booklet</span> to confirm the cover is right for you.</font>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <table border="0" cellpadding="10" cellspacing="0">
+                      <tr>
+                       <td class="mobile-gutter" width="5"></td>
+                        <td valign="top">
+                          <table border="0" cellpadding="5" cellspacing="0">
+                            <tr>
+                              <td><img src="images/assets/esure/num/4.png" width="27"></td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td>
+                          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td align="left" valign="top">
+                                <font style="font-family: Arial;font-size:16px;line-height:23px;color:#0072af;font-weight:normal">
+                                 Call us if any of your account details are incorrect on the<span style="font-weight: bold;"> Confirmation of your Direct Debit Instruction.</span></font>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <table border="0" cellpadding="10" cellspacing="0">
+                      <tr>
+                       <td class="mobile-gutter" width="5"></td>
+                        <td valign="top">
+                          <table border="0" cellpadding="5" cellspacing="0">
+                            <tr>
+                              <td><img src="images/assets/esure/num/5.png" width="27"></td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td>
+                          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td align="left" valign="top">
+                                <font style="font-family: Arial;font-size:16px;line-height:23px;color:#0072af;font-weight:normal">
+                                  Save this email for quick reference and add esure to your contacts to make sure you can receive our emails.</font>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td height="15" style="height: 15px;"></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#E9F6FE" class="mobile_obg">
+                      <tbody>
+                        <tr>
+                          <td bgcolor="#E9F6FE" align="center" valign="top" style="padding: 10px;">
+                          <table cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor="#E9F6FE">
+                            <tbody>
+                              <tr>
+                                <!-- Column : BEGIN -->
+                                <td class="full-wid-center">
+                                  <table cellspacing="0" cellpadding="0" border="0">
+                                    <tbody>
+                                      <tr>
+                                        <td style="padding: 0px 10px 10px; text-align: center;">
+                                        <img src="images/assets/esure/icons/esure_laptop.png" width="290" height="241" alt="Laptop Icon" border="0" class="fluidImage" style="height: auto;" />
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                                <!-- Column : END -->
+                                <!-- Column : BEGIN -->
+                                <td class="full-wid-center">
+                                  <table cellspacing="0" cellpadding="20" border="0">
+                                    <tbody>
+                                      <tr>
+                                        <td style="text-align: center; padding: 0;">
+                                          <table align="right" cellspacing="0" cellpadding="0" border="0">
+                                            <tbody>
+                                              <tr valign="middle">
+                                                <!--[if mso]><td width="20"></td><![endif]-->
+                                                <td style="text-align: center;">
+                                                <!-- Box content : BEGIN -->
+                                                <div style="width: 260px;">
+                                                  <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    <tbody>  
+                                                      <tr>
+                                                        <td> 
+                                                          <font  style="text-align: center; font-family: Arial, sans-serif; font-size: 16px;color:#0072af; font-weight:bold; line-height: 23px;">My Account</font>
+                                                        </td>
+                                                      </tr>
+
+                                                      <tr>
+                                                        <td height="10" style="height: 10px;"></td>
+                                                      </tr>
+
+                                                      <tr>
+                                                        <td> 
+                                                          <font style="text-align: center; font-family: Arial, sans-serif; font-size: 16px;color:#0072af; font-weight:lighter; line-height: 23px;">Get your policy questions answered</font>
+                                                        </td>
+                                                      </tr>
+
+                                                      <tr>
+                                                        <td> 
+                                                          <font  style="text-align: center; font-family: Arial, sans-serif; font-size: 16px;color:#0072af; font-weight:lighter; line-height: 23px;">View your policy details</font>
+                                                        </td>
+                                                      </tr>
+
+                                                      <tr>
+                                                        <td> 
+                                                          <font  style="text-align: center; font-family: Arial, sans-serif; font-size: 16px;color:#0072af;font-weight:lighter; line-height: 23px;">Print your documents</font>
+                                                        </td>
+                                                      </tr>
+                                                    </tbody>
+                                                  </table>
+                                                </div>
+                                                <!-- Box content : END -->
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                                <!-- Column : END -->
+                              </tr>
+                            </tbody>
+                          </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td height="15" style="height: 15px;"></td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <table width="100%" align="center" valign="top" border="0" cellpadding="0" cellspacing="0" class="mobile_bc">
+                      <tr>
+                        <td>
+
+                          <!--[if mso]>
+                          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                          <tr>
+                          <td valign="top" width="50%">
+                          <![endif]-->
+                           
+                          <!-- LEFT TABLE -->
+                          <div bgcolor="#E9F6FE" class="column" style="max-width:290px;width:100%; display: inline-block;vertical-align: top;" dir="ltr">
+                            <table width="100%" valign="top" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                              <tr>
+                                <td valign="top" align="center" width="100%" bgcolor="#E9F6FE">
+                                  <table width="100%">
+                                    <tr>
+                                      <td height="10" style="height: 10px;"></td>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" align="center">
+                                        <img src="images/assets/esure/icons/esure_phone.png" width="50" height="50" alt="contact" border="0" class="fluidImage" style="display:block !important;width:100%;max-width:50px; height:auto" />
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td height="15" style="height: 15px;"></td>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" align="center" style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold; color: #0072af; line-height: 20px; mso-line-height-rule: exactly; text-align: center;">Customer Service</td> 
+                                    </tr>
+                                    <tr>
+                                      <td height="5" style="height: 5px;"></td>
+                                    </tr>
+                                    <tr>
+                                      <td align="center" style="font-family: Arial, sans-serif;font-size:18px;line-height:18px;color:#0072af;font-weight:bold;">0345 601 7074</td>
+                                    </tr>
+                                    <tr>
+                                      <td height="5" style="height: 5px;"></td>
+                                    </tr>
+                                    <tr>
+                                      <td align="center">
+                                        <font style="font-family: Arial, sans-serif; font-size: 12px; color:  #0072af; line-height:18px; text-decoration: none; font-weight: lighter;">
+                                            Open Mon-Fri 8am to 8pm,
+                                        </font>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td align="center">
+                                        <font style="font-family: Arial, sans-serif; font-size: 12px; color: #0072af; line-height:18px; text-decoration: none; font-weight: lighter;">
+                                            Sat 9am to 5pm, Sun 9am to 2pm
+                                        </font>
+                                      </td>
+                                    </tr>
+                                    <!-- Space at the bottom : BEGIN -->
+                                    <tr>
+                                      <td height="10" style="height: 10px;"></td>
+                                    </tr>
+                                    <!-- Space at the bottom : END -->
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                         <!--[if !mso]> <!---->
+                            <div style="margin-right: 10px; display: inline-block;" class="desktop-only"></div> 
+                         <!-- <![endif]-->
+
+                          <!--[if mso]>
+                          </td>
+                          <td valign="top">&nbsp;&nbsp;&nbsp;</td>
+                          <td valign="top" width="50%">
+                          <![endif]-->
+
+                          <table width="100%" height="20" align="left" valign="top" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; width: 100%!important; height: 20px;" bgcolor="#fff" class="mobile-drop">
+                            <tr><td></td></tr>
+                          </table>
+                          <!-- RIGHT TABLE -->
+                          <div bgcolor="#E9F6FE" class="column" style="max-width:290px;width:100%;display:inline-block;vertical-align: top;" dir="ltr">
+                            <table width="100%" align="left" valign="top" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;">
+                              <tr>
+                                <td valign="top" align="center" width="100%" bgcolor="#E9F6FE">
+                                  <table width="100%">
+                                    <tr>
+                                      <td height="10" style="height: 10px;"></td>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" align="center">
+                                        <img src="images/assets/esure/icons/esure_phone.png" width="50" height="50" alt="contact" border="0" class="fluidImage" style="display:block !important;width:100%;max-width:50px; height:auto" />
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td height="15" style="height: 15px;"></td>
+                                    </tr>
+                                    <tr>
+                                      <td valign="top" align="center" style="font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold; color: #0072af; line-height: 20px; mso-line-height-rule: exactly; text-align: center;">Claims</td> 
+                                    </tr>
+                                    <tr>
+                                      <td height="5" style="height: 5px;"></td>
+                                    </tr>
+                                   <tr>
+                                      <td align="center" style="font-family: Arial, sans-serif;font-size:18px;line-height:18px;color:#0072af;font-weight:bold;">0345 601 7072</td>
+                                    </tr>
+                                    <tr>
+                                      <td height="5" style="height: 5px;"></td>
+                                    </tr>
+                                    <tr>
+                                      <td align="center" style="font-family: Arial, sans-serif; font-size: 12px; color: #0072af; text-decoration: none; font-weight: lighter; line-height:18px;">Open Mon-Fri 8am to 8pm,</td>
+                                    </tr>
+                                    <tr>
+                                      <td align="center">
+                                        <font style="font-family: Arial, sans-serif; font-size: 12px; color: #0072af; line-height:18px; text-decoration: none; font-weight: lighter;">
+                                            Sat 9am to 4pm
+                                        </font>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td height="10" style="height: 10px;"></td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+
+                          <!--[if mso]>
+                          </td>
+                          </tr>
+                          </table>
+                          <![endif]-->
+
+                          </td>
+                      </tr>
+                    </table>  
+                  </td>
+                </tr>
+
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td height="15" style="height: 15px;"></td>
+          </tr>
+          
+          <tr>
+            <td>
+              <hr />
+            </td>
+          </tr>
+ 
+          <tr>
+            <td>
+              <table cellpadding="0" width="100%" cellspacing="0">
+                <tr>
+                  <td class="text_p"></td>
+                  <td>
+                    <table cellpadding="0" width="100%" cellspacing="0">
+                      <tr>
+                        <td height="10" style="height: 10px;"></td>
+                      </tr>
+                      <tr>
+
+                        <td align="left">
+                          <font style="font-family: Arial, sans-serif; font-size: 16px; color: #f08a00; text-decoration: none; line-height:23px; ">You've made a great decision to insure your home with us, so why not get extra peace of mind with our other 5 Star Defaqto rated insurance? 
+                          </font>
+                        </td>
+                      </tr> 
+                    </table>
+                  </td>
+                  <td class="text_p"></td>
+                </tr>
+                <!-- Space at the bottom : BEGIN -->
+                <tr>
+                  <td height="15" style="height: 15px;"></td>
+                </tr>
+                <!-- Space at the bottom : END -->
+              </table>
+            </td>
+          </tr>
+               
+          <tr>
+            <td>
+              <table align="center" valign="top" border="0" cellpadding="0" cellspacing="0" class="full-wid-center">
+                <tr>
+                  <td>
+                    <!--[if mso]>
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                    <td valign="top" width="50%">
+                    <![endif]-->
+                    <!-- LEFT TABLE -->
+                    <div bgcolor="#fcf3e4" style="max-width:290px;width:100%; display: inline-block; vertical-align: top;" dir="ltr" class="full-wid-center">
+                      <table align="center" border="0" cellpadding="0" cellspacing="0" class="100%" bgcolor="#fcf3e4">
+                        <tr>
+                          <!-- Column : BEGIN -->
+                          <td width="30%">
+                            <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                              <td dir="ltr" align="center" valign="top" style="padding: 0 10px;">
+                                <img src="images/assets/esure/icons/esure_small_car.png"  width="70" alt="eSure_Car_Icon" border="0" style="display: block;">
+                              </td>
+                              </tr>
+                            </table>
+                          </td>
+                          <!-- Column : END -->
+                          <!-- Column : BEGIN -->
+                          <td width="70%">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td dir="ltr" valign="top" style="padding: 10px; text-align: left;">
+                                  <font style="font-family: Arial, sans-serif;font-size:18px;line-height:45px;color:#f38c1e;text-decoration:none !important;font-weight:bold;">Car</font>
+                                  <br />
+                                  <font style="font-family: Arial, sans-serif; font-size: 14px; color: #0072af; text-decoration: none; font-weight: lighter; line-height: 23px;">
+                                   Join 10% of new customers who paid <span style="font-weight: bold;">£232* or less </span>for their car insurance.
+                                  </font>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="padding: 10px; text-align: left;">
+                                 <font style="font-family: Arial, sans-serif; font-size: 14px; color: #0072af; text-decoration: none; font-weight: lighter; line-height: 23px;">* July-December 2017</font>
+                                </td>
+                              </tr>
+                             <tr class="desktop-only">
+                                <td height="60" style="height: 60px;"></td>
+                              </tr>
+                              <tr>
+                                <td class="p-lb">
+                                <!-- Button : BEGIN -->
+                                <table cellspacing="0" cellpadding="0" border="0" align="left">
+                                  <tbody>
+                                    <tr>
+                                      <td width="10"></td>
+                                      <td style="border-radius: 5px; background: #8cb941; text-align: center;">
+                                      <a href="" style="border: 10px solid #8cb941; font-family: Arial; font-size: 16px; text-align: center; text-decoration: none; display: block; border-radius: 5px; font-weight: 100; letter-spacing: 1px;" class="button-a">&nbsp;&nbsp;<span style="color: #ffffff;">Get a<b> quote </b>&nbsp;&gt;&gt;</span>&nbsp;&nbsp;
+                                      </a>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <!-- Button : END -->
+                                </td>
+                              </tr>
+                              <tr class="desktop-only">
+                                <td height="5" style="height: 5px;"></td>
+                              </tr>
+                            </table>
+                          </td>
+                          <!-- Column : END -->
+                        </tr>
+                      </table>
+                    </div>
+                   <!--[if !mso]> <!---->
+                      <div style="margin-right: 10px; display: inline-block;" class="desktop-only"></div> 
+                   <!-- <![endif]-->
+
+                    <!--[if mso]>
+                    </td>
+                    <td valign="top">&nbsp;&nbsp;&nbsp;</td>
+                    <td valign="top" width="50%">
+                    <![endif]-->
+
+    
+                    <!-- RIGHT TABLE -->
+                    <div bgcolor="#E9F6FE" class="full-wid-center" style="max-width:290px;width:100%;display:inline-block;vertical-align: top;" dir="ltr">
+                    <table width="100%" align="left" valign="top" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;"  bgcolor="#E9F6FE">
+
+                        <tr>
+                          <td valign="top" align="center" width="100%" bgcolor="#E9F6FE">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" class="full-wid-center" >
+                              <tr>
+                                <!-- Column : BEGIN -->
+                                <td width="30%">
+                                  <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                    <td dir="ltr" align="center" valign="top" style="padding: 0 10px;">
+                                      <img src="images/assets/esure/icons/esure_small_travel.png"  width="70" alt="eSure Travel Icon" border="0" class="mobile-center" style="display: block;">
+                                    </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                <!-- Column : END -->
+                                <!-- Column : BEGIN -->
+                                <td width="70%">
+                                  <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                      <td dir="ltr" valign="top" style="padding: 10px; text-align: left;">
+                                        <font style="font-family: Arial, sans-serif;font-size:18px;line-height:45px;color:#f38c1e;text-decoration:none !important;font-weight:bold;">Travel</font>
+                                        <br />
+                                        <font style="font-family: Arial, sans-serif; font-size: 14px; color: #0072af; text-decoration: none; font-weight: lighter; line-height: 23px;">
+                                          Planning a trip?
+                                        </font>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td dir="ltr" valign="top" style="padding:  0px 10px; text-align: left;">
+                                        <font style="font-family: Arial, sans-serif; font-size: 14px; color: #0072af; text-decoration: none; font-weight: lighter; line-height: 23px;">
+                                         Add Annual Travel Insurance cover to your home policy for unlimited worldwide trips - as long as each trip is 45 days or less.
+                                        </font>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td dir="ltr" valign="top" style="padding: 0px 10px; text-align: left;">
+                                        <font style="font-family: Arial, sans-serif; font-size: 14px; color: #0072af; text-decoration: none; font-weight: bold; line-height: 23px;">
+                                          Call us on 0345 045 8000
+                                        </font>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td height="10" style="height: 10px;"></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="p-lb">
+                                      <!-- Button : BEGIN -->
+                                      <table  cellspacing="0" cellpadding="0" border="0" align="left" >
+                                        <tbody>
+                                          <tr>
+                                            <td width="10"></td>
+                                            <td style="border-radius: 5px; background: #8cb941; text-align: center;">
+                                            <a href="" style="border: 10px solid #8cb941; font-family: Arial; font-size: 16px; text-align: center; text-decoration: none; display: block; border-radius: 5px; font-weight: 100; letter-spacing: 1px;" class="button-a">&nbsp;&nbsp;<span style="color: #ffffff;">Get a<strong> quote </strong>&nbsp;&gt;&gt;</span>&nbsp;&nbsp;
+                                            </a>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <!-- Button : END -->
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                                <!-- Column : END -->
+                              </tr>
+
+                              <!--[if mso]>
+                              <tr class="desktop-only">
+                                <td height="19" style="height: 19px;"></td>
+                              </tr>
+                              <![endif]-->
+                              <tr class="desktop-only">
+                                <td height="5" style="height: 5px;"></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+
+                    <!--[if mso]>
+                    </td>
+                    </tr>
+                    </table>
+                    <![endif]-->
+
+                    </td>
+                </tr>
+                
+              </table> 
+            </td>
+          </tr>
+
+          <tr>
+            <td height="10" style="height: 15px;"></td>
+          </tr>
+          
+          <tr>
+            <td>
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f38c1e">
+                <tbody>
+                  <tr>
+                    <td height="10" style="height: 10px;"></td>
+                  </tr>
+                  <tr>
+                    <td align="center" width="300">
+                      <font style="font-family: Arial, sans-serif;font-size:16px;line-height:15px;color:#fff;text-decoration:none !important;font-weight:bold;">
+                         Not the right time?
+                      </font>
+                      </td>
+                  </tr>
+
+                  <tr>
+                    <td height="10" style="height: 10px;"></td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" class="full-wid-center mobile-obg"  bgcolor="#fcf3e4">
+                <tr>
+                  <!-- Column : BEGIN -->
+                  <td width="30%">
+                    <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr class="desktop-only">
+                      <td height="20" style="height: 20px;"></td>
+                    </tr>
+                      <tr>
+                      <td dir="ltr" align="center" valign="top" style="padding: 0 10px;">
+                        <img src="images/assets/esure/icons/esure_small_cal.png" alt="Icon" title="Icon" border="0" class="mobile-center" style="height: auto;">
+                      </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <!-- Column : END -->
+                  <!-- Column : BEGIN -->
+                  <td width="70%">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tr>
+                        <td height="20" style="height: 20px;"></td>
+                      </tr>
+                      <tr>
+                        <td dir="ltr" valign="top" style="padding: 10px; text-align: left;">
+                          <font style="font-family: Arial, sans-serif; font-size: 16px; color: #0072af; text-decoration: none; font-weight: lighter; line-height: 20px;">
+                          Let us know when your <font style="font-weight: bold;">car or travel renewal dates </font>are due and we'll be back in touch nearer the time.
+                          </font>
+                        </td>
+                      </tr>
+                      <!-- Space at the bottom : BEGIN -->
+                      <tr>
+                        <td height="12" style="height: 12px;"></td>
+                      </tr>
+                      <!-- Space at the bottom : END -->
+                      <tr>
+                        <td>
+                        <!-- Button : BEGIN -->
+                        <table  cellspacing="0" cellpadding="0" border="0" align="left">
+                          <tbody>
+                            <tr>
+                              <td width="10"></td>
+                              <td style="border-radius: 5px; background: #8cb941; text-align: center;">
+                              <a href="" style="border: 10px solid #8cb941; font-family: Arial; font-size: 16px; text-align: center; text-decoration: none; display: block; border-radius: 5px; font-weight: 100; letter-spacing: 1px;" class="button-a">&nbsp;&nbsp;<span style="color: #ffffff;">Renewal<span style="font-weight: bold;"> date </span>&nbsp;&gt;&gt;</span>&nbsp;&nbsp;
+                              </a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- Button : END -->
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <!-- Column : END -->
+                </tr>
+                <!-- Space at the bottom : BEGIN -->
+                <tr>
+                  <td height="15" style="height: 15px;"></td>
+                </tr>
+                <!-- Space at the bottom : END -->
+              </table>
+            </td>
+          </tr>
+      
+          <tr>
+            <td height="20" style="height: 20px;"></td>
+          </tr>
+
+          <tr>
+            <td>
+              <table cellpadding="0" width="100%" cellspacing="0">
+                <tr>
+                  <td class="mobile-gutter " width="20"></td>
+                  <td>
+                    <table cellpadding="0" width="100%" cellspacing="0">
+                      <tr>
+                        <td align="left">
+                          <font style="font-family: Arial, sans-serif; font-size: 16px; color: #0072af; text-decoration: none; line-height:23px;">We'll also get in touch with any news and special offers. If you don’t want to receive these marketing emails just let us know <a href="#" style="text-decoration: underline;color:#f38c1e;font-weight: bold; cursor: pointer;">here</a>.
+                          </font>
+                        </td>
+                      </tr> 
+                    </table>
+                  </td>
+                  <td class="mobile-gutter" width="20"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td height="10" style="height: 15px;"></td>
+          </tr>
+
+          <tr>
+            <td>
+              <table cellpadding="0" width="100%" cellspacing="0">
+                <tr>
+                  <td class="mobile-gutter" width="20"></td>
+                  <td>
+                    <table cellpadding="0" width="100%" cellspacing="0">
+                      <tr>
+                        <td align="left">
+                          <font style="font-family: Arial, sans-serif; font-size: 16px; color: #0072af; text-decoration: none; line-height:23px;">All your documents can be found in <a href="#" style="text-decoration: underline;color:#f38c1e;font-weight: bold; cursor: pointer;">My Account.</a> Your Policy Booklet is for you and anyone else covered on your policy to read. This includes everything you need to know about your cover, limitations and exclusions and how we use and look after your personal information. If you change or cancel your policy, esure Services Limited charge an administration fee. Details of these fees can be found in Your Agreement with esure Services Limited.
+                          </font>
+                        </td>
+                      </tr> 
+                    </table>
+                  </td>
+                  <td class="mobile-gutter" width="20"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td height="10" style="height: 15px;"></td>
+          </tr>
+          
+          <tr>
+            <td>
+              <table cellpadding="0" width="100%" cellspacing="0">
+                <tr>
+                  <td class="mobile-gutter" width="20"></td>
+                  <td align="left">  
+                    <font style="font-family: Arial, sans-serif; font-size: 16px; color: #0072af; text-decoration: none; line-height:10px;font-weight:lighter;">Thank you again for choosing esure.</font>   
+                  </td>
+                  <td class="mobile-gutter" width="20"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td height="20" style="height: 20px;"></td>
+          </tr>
+          
+          <tr>
+            <td>
+              <table cellpadding="0" width="100%" cellspacing="0">
+                <tr>
+                  <td class="mobile-gutter" width="20"></td>
+                  <td align="left">  
+                    <font style="font-family: Arial, sans-serif; font-size: 16px; color: #0072af; text-decoration: none; line-height:10px;font-weight:bold;">esure Customer Service Team</font>   
+                  </td>
+                  <td class="mobile-gutter" width="20"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        
+          <tr>
+            <td height="30" style="height: 30px;"></td>
+          </tr>
+          
+          <tr>
+            <td>
+              <table cellpadding="0" cellspacing="0" width="100%" align="center" bgcolor="#ffffff">
+                <tr>
+                  <td width="5"></td>
+                  <td class="full-wid-center">
+                    <table cellpadding="0" cellspacing="0">
+                      <tr class="row">
+                        <td class="mobile-gutter" width="20"></td>
+                        <td valign="top" width="200"  align="left">
+                          <table cellpadding="0" cellspacing="0" align="left">
+                            <tr>
+                              <td align="left">
+                                <img src="images/assets/esure/logos/defaqto_multiyear.jpg" alt="defaqto 2018" title="defaqto 2018" style="display: block;" width="75"  border="0"/>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td valign="top" width="200"  align="left">
+                          <table cellpadding="0" cellspacing="0" align="center">
+                          <!-- Space at the bottom : BEGIN -->
+                          <tr>
+                            <td height="20" style="height: 20px;"></td>
+                          </tr>
+                          <!-- Space at the bottom : END -->
+                            <tr align="center">
+                              <td>
+                                <img src="images/assets/esure/logos/trustpilot.png" alt="Trustpilot" title="Trustpilot" style="display: block;" width="120" border="0"/>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td valign="top" width="200" style="padding-bottom: 20px;" align="right">
+                          <table cellpadding="0" cellspacing="0" align="right">
+                          <!-- Space at the bottom : BEGIN -->
+                          <tr>
+                            <td height="10" style="height: 10px;"></td>
+                          </tr>
+                          <!-- Space at the bottom : END -->
+                            <tr>
+                              <td align="right">
+                                <div style="padding-right: 20px;">
+                                  <a href="https://www.facebook.com/esureinsurance" title="Find us on Faceook" style="text-decoration: none !important; border: none !important;"><img src="images/assets/esure/logos/facebook.png" alt="Find us on Faceook" title="Find us on Faceook" style="display: block;" height="25" border="0"/></a>
+                                </div>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                           <td class="mobile-gutter" width="20"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td height="10" style="height: 15px;"></td>
+          </tr>
+          
+          <!-- Footer begin -->
+          <tr>
+            <td>
+            <table cellpadding="0" width="100%" cellspacing="0">
+              <tr>
+                <td>
+                  <table cellpadding="0" width="100%" cellspacing="0">
+                    <tr>
+                      <td>
+                        <table cellpadding="0" cellspacing="0"  width="100%">
+                          <tr align="center" valign="top">
+                            <td class="mobile-gutter" width="20"></td>
+                            <td>
+                              <table cellpadding="0" cellspacing="0">
+                                <tr>
+                                  <td> 
+                                    <font style="font-family: Arial, sans-serif; font-size:10px;line-height:15px;color:#0072af;">esure Car and Home Insurance is arranged and administered by esure Services Limited, who are registered in England and Wales no.2135610 at The Observatory, Reigate, Surrey, RH2 0SG and who are authorised and regulated by the Financial Conduct Authority, register no. 312063. The insurance is underwritten by esure Insurance Limited who are authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority, number 203350.</font>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td height="10" style="font-size:15px;line-height:1px">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <font style="font-family: Arial, sans-serif; font-size:10px;line-height:15px;color:#0072af;">The core elements of Travel Insurance are underwritten by AWP P&C SA (Financial Services Register no. 534384).</font>
+
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td height="10" style="font-size:15px;line-height:1px">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <font style="font-family: Arial, sans-serif; font-size:10px;line-height:15px;color:#0072af;">Insurance is not available in Northern Ireland or the Channel Islands and is subject to normal acceptance criteria.</font>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td height="10" style="font-size:15px;line-height:1px">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <font style="font-family: Arial, sans-serif; font-size:10px;line-height:15px;color:#0072af;">Please do not reply to this email as it comes from an automated mailbox that cannot accept replies.</font>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td class="mobile-gutter" width="20"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <!-- Space at the bottom : BEGIN -->
+              <tr>
+                <td height="15" style="height: 15px;"></td>
+              </tr>
+              <!-- Space at the bottom : END -->
+            </table>
+            <!-- Travel Footer: END -->
+            </td>
+          </tr>
+          <!-- Footer End -->
+        </table>
+      </td>
+      <td align="left" class="desktop-only">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
