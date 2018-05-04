@@ -1,0 +1,1236 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>esure</title>
+  <!--[if mso]>
+    <style>
+      * {
+        font-family: Arial, sans-serif !important;
+      }
+    </style>
+  <![endif]-->
+  <!-- CSS Reset -->
+  <style type="text/css">
+
+  .ReadMsgBody { width: 100%; }
+  .ExternalClass { width: 100%; }
+  .ExternalClass * { line-height: 100%; }
+  p { margin: 1em 0; }
+  table td { border-collapse: collapse; }
+  @-ms-viewport {
+  width: device-width;
+  }
+  a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; 
+  }
+
+  html,
+  body {
+    margin: 0 auto !important;
+      padding: 0 !important;
+      height: 100% !important;
+      width: 100% !important;
+  }
+
+  /* What it does: Stops email clients resizing small text. */
+  * {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+  }
+
+  /* What it does: Centers email on Android 4.4 */
+  div[style*="margin: 16px 0"] {
+      margin:0 !important;
+  }
+
+  /* What it does: Stops Outlook from adding extra spacing to tables. */
+  table,
+  td {
+      mso-table-lspace: 0pt !important;
+      mso-table-rspace: 0pt !important;
+  }
+
+  /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+  table {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    margin: 0 auto !important;
+  }
+  table table table {
+    table-layout: auto;
+  }
+
+  /* What it does: Uses a better rendering method when resizing images in IE. */
+  img {
+     -ms-interpolation-mode:bicubic;
+  }
+
+  /* What it does: A work-around for iOS meddling in triggered links. */
+  *[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+
+  /* What it does: A work-around for Gmail meddling in triggered links. */
+  .x-gmail-data-detectors,
+  .x-gmail-data-detectors *,
+  .aBn {
+      border-bottom: 0 !important;
+      cursor: default !important;
+  }
+
+  /* What it does: Prevents Gmail from displaying an download button on large, non-linked images. */
+  .a6S {
+    display: none !important;
+    opacity: 0.01 !important;
+  }
+  /* If the above doesn't work, add a .g-img class to any image in question. */
+  img.g-img + div {
+    display:none !important;
+  }
+
+  /* What it does: Prevents underlining the button text in Windows 10 */
+  .button-link {
+    text-decoration: none !important;
+  }
+
+  /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+  /* Create one of these media queries for each additional viewport size you'd like to fix */
+  /* Thanks to Eric Lepetit @ericlepetitsf) for help troubleshooting */
+  @media only screen and (min-device-width: 375px) and (max-device-width: 413px) { /* iPhone 6 and 6+ */
+      .email-container {
+        min-width: 375px !important;
+      }
+  }
+
+  </style>
+    
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+  <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]-->
+
+  <!-- Progressive Enhancements -->
+  <style type="text/css">
+
+    /* What it does: Hover styles for buttons */
+    .button-td,
+    .button-a {
+      transition: all 100ms ease-in;
+    }
+
+    .button-td:hover,
+    .button-a:hover {
+      background: #99CC33 !important;
+      border-color: #99CC33 !important;
+    }
+
+    /* Media Queries */
+    @media screen and (max-width: 520px) {
+
+      /* Force images to resize to full width of their container */
+      img[class="hh-fluid"],
+      img[class="hh-force-col-center"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+      }
+      /* And center these ones */
+      img[class="hh-force-col-center"] {
+        margin: auto !important;
+      }
+
+      .email-container {
+        width: 100% !important;
+        margin: auto !important;
+      }
+
+      /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+      .fluid {
+          max-width: 100% !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+      }
+
+      /* What it does: Forces table cells into full-width rows. !full 100 */
+      .full-wid,
+      .full-wid-center {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+            
+      /* And center justify these ones. */
+      .full-wid-center {
+        text-align: center !important;
+      }
+
+      /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+      .mobile-center{
+        text-align: center !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: none !important;
+      }
+
+
+      table.mobile-center{
+        display: inline-block !important;
+      }
+
+    }
+
+    /* Fix */
+
+      /*This resolves the Outlook 07, 10, and Gmail td padding issue fix*/
+      table td {
+        border-collapse: collapse;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+      .ExternalClass * {
+        line-height: 100%;
+      }
+      /*Yahoo paragraph fix*/
+      p {
+        margin: 1em 0;
+      }
+      body {
+        -webkit-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        font-family: arial;
+        font-family: arial;
+      }
+      /*This resolves the Outlook 07, 10, and Gmail td padding issue fix*/
+      table td {
+        border-collapse: collapse;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+      table {
+        border-collapse: collapse; 
+        border-spacing: 0; 
+        mso-table-lspace: 0pt; 
+        mso-table-rspace: 0pt;
+      }
+
+      table td {
+        border-collapse: collapse;
+      }
+
+      /* Allow smoother rendering of resized image in Internet Explorer */
+      img {
+        -ms-interpolation-mode: bicubic; 
+      }
+      /* Reset paragraph tags in Hotmail */
+      p {
+        margin: 0;
+      }
+      /* Work around for iOS styling */
+      a[href^=tel] {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a[href^=mailto] {
+        color: inherit;
+        text-decoration: inherit;
+      }
+    </style>
+
+  <style type="text/css">
+
+    .drop {
+      width: 100% !important;
+      height: auto !important;
+    }
+    /* Existing Libary */
+     .fluidImage {
+      width: 100% !important;
+      height: auto !important;
+    }
+    /* Hide on Desktop */
+    *[class] .mobile-drop,
+    *[class].mobile-drop,
+    .mobile-drop {
+      max-height:0; /* Gmail*/
+      display:none!important; /* Generic*/
+      mso-hide:all; /* Outlook clients*/
+      overflow:hidden!important; /* Generic */
+      opacity: 0!important; /* Android */
+      max-height: 0;
+      font-size: 0;
+      width: 0;
+      line-height: 0;
+    }
+    *[class] .mobile-padding{
+      display: none !important;
+    }
+
+    /* Helpers */
+    *[class] .inline {
+      display: inline-block;
+    }
+
+    @media only screen and (max-width: 520px) {
+ 
+      *[class] .mobile-center {
+        text-align: center !important;
+        margin: 0 auto !important;
+        float: none !important;
+      }
+
+      td.mobile-center {
+        text-align: center !important;
+        margin: 0 auto !important;
+        float: none !important;
+      }
+
+      *[class] .mobile-padding{
+        display: block !important;
+      }
+
+      *[class] .mobile-gutter {
+        width: 20px !important;
+      }
+
+      /* Mobile behaviour */
+      *[class] .desktop-only,
+      .desktop-only {
+        display: none;
+        max-height:0; /* Gmail*/
+        display:none; /* Generic*/
+        mso-hide:all; /* Outlook clients*/
+        overflow:hidden; /* Generic */
+      }
+
+      *[class] .mobile-drop,
+      *[class].mobile-drop,
+      .mobile-drop {
+        display: block!important;
+        width: 100%;
+        clear: both;
+        overflow: visible!important;
+        max-height:100%; /* Gmail*/
+        mso-hide:all !important; /* Outlook clients */
+        opacity: 1!important; /* Android */
+        display: block !important;
+        width: auto !important;
+        overflow: visible !important;
+        max-height: none !important;
+        font-size: inherit !important;
+        line-height: inherit !important; 
+      }
+
+      *[class] .mobile-inline {
+        display: inline !important;
+      }
+
+      /* Helpers */
+      *[class] .no-padding {
+        padding-top: 0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 0 !important;
+        padding-left: 0 !important;
+      }
+
+      *[class] .no-margin {
+        margin-top: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
+      }
+    }/* End Media */
+  </style>
+    <!--[if gte mso 9]>
+    <style>
+    .outlookfix{font-size:0%; line-height:0;}
+    </style>
+    <![endif]-->
+  <style type="text/css">
+
+    @media only screen and (max-width: 520px) {
+      /* Iconns and copy roll (existing emails style)*/
+      .container {
+        width: 100% !important;
+        margin: 0 auto !important;
+      }
+      .container1 {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+      }
+         .mobile-heading{
+        width: 150px !important;
+        }
+        .ren_p-mobile{
+        padding-left:0px !important;
+        }
+        .renFluid {
+        max-width: 100% !important;
+        height: auto !important;
+        width: 40% !important;
+        min-width: 40% #important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        }
+        .ren-mobile-table{
+          width: 260px;
+          min-width: 260px !important;
+        }
+    }
+    .drop {
+      width: 100% !important;
+      height: auto !important;
+    }
+    .drop1 {
+      width: 100% !important;
+      float: left !important;
+      height: auto !important;
+    }
+    .wrap100pc {
+      width: 100% !important;
+      height: auto !important;
+    }
+    .padd_b_10 {
+      padding-bottom: 10px !important;
+    }
+  .p-custom{
+    padding:20px 0px 0px 0px; 
+    } 
+  </style>
+</head>
+
+<body bgcolor="#FFFFFF" style="margin: 0px; padding:0px; -webkit-text-size-adjust:none; -ms-text-size-adjust: none;" yahoo="fix">
+
+<table align="center" cellpadding="0" cellspacing="0" width="100%">
+  <tbody>
+    <tr class="outlookfix">
+      <td align="left" class="desktop-only">&nbsp;</td>
+        <td align="center" class="full-wid-center" width="600">
+          <!-- main content -->
+          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+              <td align="center"  bgcolor="#ffffff">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="100%" bgcolor="#ffffff">
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td align="left" valign="top">
+                            <table cellpadding="0" cellspacing="0" width="100%" align="center" bgcolor="#0072af">
+    <tr>
+      <td class="mobile-gutter" width="20"></td>
+      <td align="center" valign="top">
+        <table cellpadding="0" cellspacing="0" class="full-wid-center" width="600" align="center">
+          <tbody>
+            <tr class="outlookfix">
+              <td height="20" style="font-size:10px; line-height:10px;"> </td>
+            </tr>
+            <tr class="outlookfix">
+              <td align="middle">
+                <table border="0" cellpadding="0" cellspacing="0" class="full-wid-center" width="600">
+                  <tr>
+                    <td align="left" width="280">
+                      <table border="0" cellpadding="0" cellspacing="0" width="60" align="left">
+                        <tr>
+                          <td>
+                            <div style="float: left;">
+                              <a alias="logo" href="http://www.esure.com" target="_blank"><img alt="esure" border="0"  height="34" src="http://image.email.esure.com/lib/fe8913727d6207797d/m/1/esure_2017test_onblue.png" style="margin:0; padding:0; border:none; display:block;" width="160" border="0"></a>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                   <td align="right" width="130">
+                      <table border="0" cellpadding="0" cellspacing="0" width="130">
+                         <tr>
+                            <td align="right" valign="middle">
+
+                              <!--[if (gte mso 9)|(IE)]>
+                              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                              <td valign="top" width="20%">
+                              <![endif]-->
+                               
+                              <!-- LEFT TABLE -->
+                              <table align="middle" border="0" cellpadding="0" cellspacing="0" style="display: inline-block;" width="30">
+                                  <tr>
+                                    <td>
+                                      <div style="width: 30px">
+                                        <img src="http://image.email.esure.com/lib/fe8913727d6207797d/m/1/view_online_icon.png" alt="view in browser" style="display: block;" border="0">
+                                      </div>
+                                    </td>
+                                  </tr>
+                              </table> 
+
+                              <!--[if (gte mso 9)|(IE)]>
+                              </td>
+                              <td valign="top" width="80%">
+                              <![endif]-->
+
+                              <!-- RIGHT TABLE -->
+                              <table align="middle" border="0" cellpadding="0" cellspacing="0" style="display:inline-block;" width="80">
+                                  <tr>
+                                    <td>
+                                      <div style="width: 80px; padding: 3px 0;">
+                                        <a alias="" href="%%view_email_url%%" style="font-size:14px; line-height:20px; font-weight:normal; text-decoration:none; color:#bcddf7; font-family: Arial, sans-serif;line-height:12px;" target="_blank">View online</a>
+                                      </div>
+                                    </td>
+                                  </tr>
+                              </table>
+
+                              <!--[if (gte mso 9)|(IE)]>
+                              </td>
+                              </tr>
+                              </table>
+                              <![endif]-->
+
+                            </td>
+                          </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr class="outlookfix">
+              <td height="10" style="font-size:10px; line-height:10px;"></td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+      <td class="mobile-gutter" width="20"></td>
+    </tr>
+  </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Product Header">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Header">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                          <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" class="full-wid-center">
+  <tbody>
+    <tr>
+      <td>
+      <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" class="full-wid-center">
+        <!-- Space at the bottom : BEGIN -->
+        <tbody>
+          <tr class="mobile-drop">
+            <td height="15" style="height: 15px;"></td>
+          </tr>
+          <!-- Space at the bottom : END -->
+          <tr>
+            <!-- Column : BEGIN -->
+            <td width="50%" class="full-wid-center">
+            <table>
+              <tbody>
+                <!-- Space at the bottom : BEGIN -->
+                <tr>
+                  <td height="15" style="height: 15px;"></td>
+                </tr>
+                <!-- Space at the bottom : END -->
+                <tr>
+                  <td>
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td style="font-size: 0%; line-height: 100%;" valign="top" align="center" height="15" class="mobile-drop">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td style="font-size: 0%; line-height: 100%;" valign="top" align="center">
+                        <img src="http://image.email.esure.com/lib/fe8913727d6207797d/m/1/RelaxingSummerVacation_Fotolia_resized.jpg" alt="" title="" style="margin: 0px; display: block; text-align: center;" border="0" class="fluid" />
+                        </td>
+                        </tr>
+                          <tr>
+                        <td height="15" style="height: 15px;"></td>
+                      </tr>
+
+                      <tr>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; color: #f08a00; line-height: 20px;" valign="top" align="center">Ut, nesciunt facilisi, rem ipsam, 
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="font-size: 0%; line-height: 100%;" valign="top" align="center" height="15">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td width="20" class="desktop-only"></td>
+                              <td style="font-family: Arial, sans-serif; font-size: 14px; color: #0072af; text-decoration: none; font-weight: lighter; line-height: 20px;" valign="top" align="center">Our voucher can be spent at the biggest retailers in the High Street! All you have to do to be entered into the prize draw is tell us your home renewal date, or if you're already an esure home customer, your car or travel renewal date, by 1 May 2017.</td>
+                              <td width="20" class="desktop-only"></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="font-size: 0%; line-height: 100%;" valign="top" align="center" height="20">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>
+                        <!-- Button : BEGIN -->
+                        <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto;">
+                          <tbody>
+                            <tr>
+                              <td style="border-radius: 5px; background: #8cb941; text-align: center;">
+                              <a href="https://www.esure.com/new/home" style="border: 15px solid #8cb941; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 5px; font-weight: 100; letter-spacing: 1px;" class="button-a">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #ffffff;">Read<b>&nbsp;More</b>&nbsp;&gt;&gt;</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                              </a>
+                              </td>
+                            </tr>
+                            <!-- Space at the bottom : BEGIN -->
+                            <tr>
+                              <td height="15" style="height: 15px;"></td>
+                            </tr>
+                            <!-- Space at the bottom : END -->
+                          </tbody>
+                        </table>
+                        <!-- Button : END -->
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+            <!-- Column : END -->
+            <!-- Column : BEGIN -->
+            <td width="50%" class="full-wid-center">
+            <table>
+              <tbody>
+                <!-- Space at the bottom : BEGIN -->
+                <tr>
+                  <td height="15" style="height: 15px;"></td>
+                </tr>
+                <!-- Space at the bottom : END -->
+                <tr>
+                  <td>
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td style="font-size: 0%; line-height: 100%;" valign="top" align="center" height="15" class="mobile-drop">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td style="font-size: 0%; line-height: 100%;" valign="top" align="center">
+                        <img src="http://image.email.esure.com/lib/fe8913727d6207797d/m/1/RelaxingSummerVacation_Fotolia_resized.jpg" alt="" title="" style="margin: 0px; display: block; text-align: center;" border="0" class="fluid" />
+                        </td>
+                        </tr>
+                          <tr>
+                        <td height="15" style="height: 15px;"></td>
+                      </tr>
+                      <tr>
+                        <td style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; color: #f08a00; line-height: 20px;" valign="top" align="center">Ut, nesciunt facilisi, rem ipsam, 
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="font-size: 0%; line-height: 100%;" valign="top" align="center" height="15">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                              <td width="20" class="desktop-only"></td>
+                              <td style="font-family: Arial, sans-serif; font-size: 14px; color: #0072af; text-decoration: none; font-weight: lighter; line-height: 20px;" valign="top" align="center">Our voucher can be spent at the biggest retailers in the High Street! All you have to do to be entered into the prize draw is tell us your home renewal date, or if you're already an esure home customer, your car or travel renewal date, by 1 May 2017.</td>
+                              <td width="20" class="desktop-only"></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="font-size: 0%; line-height: 100%;" valign="top" align="center" height="20">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>
+                        <!-- Button : BEGIN -->
+                        <table cellspacing="0" cellpadding="0" border="0" align="center" style="margin: auto;">
+                          <tbody>
+                            <tr>
+                              <td style="border-radius: 5px; background: #8cb941; text-align: center;">
+                              <a href="https://www.esure.com/new/home" style="border: 15px solid #8cb941; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 5px; font-weight: 100; letter-spacing: 1px;" class="button-a">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #ffffff;">Read<b>&nbsp;More</b>&nbsp;&gt;&gt;</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                              </a>
+                              </td>
+                            </tr>
+                            <!-- Space at the bottom : BEGIN -->
+                            <tr>
+                              <td height="15" style="height: 15px;"></td>
+                            </tr>
+                            <!-- Space at the bottom : END -->
+                          </tbody>
+                        </table>
+                        <!-- Button : END -->
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </td>
+            <!-- Column : END -->
+          </tr>
+          <!-- Space at the bottom : BEGIN -->
+          <tr>
+            <td height="15" style="height: 15px;"></td>
+          </tr>
+          <!-- Space at the bottom : END -->
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                           <table align="center" border="0" cellpadding="0" cellspacing="0" width="480" class="full-wid-center mobile-table ">
+  <tbody>
+  <tr>
+    <td width="10" style="width: 10px;" class="mobile-padding">&nbsp;</td>
+    <td>
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#f7f3ee">
+      <tbody>
+        <tr>
+           <td>
+            <table border="0" cellpadding="0" bgcolor="#f7f3ee" cellspacing="0" class="mobile-table">
+                <tr>
+                 <td align="center" valign="top">
+                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                      <tbody>
+                         <tr>
+                          <td width="20%" class="full-wid-center mobile-table">
+                            <table border="0" cellpadding="0" cellspacing="0" align="left">
+                              <tr>
+                                <td style="text-align:center;padding:10px 10px 0px 30px;" class="ren_p-mobile p-cell">
+                                  <img src="http://image.email.esure.com/lib/fe8913727d6207797d/m/1/multicar+icon.png" width="60" height="auto" alt="Multicar Icon"  class="renFluid">
+                                </td>
+                              </tr>
+                            </table>
+                           </td> 
+                            <td class="full-wid-center mobile-table">
+                              <table border="0" cellpadding="0" cellspacing="0" align="left" class="mobile-center">
+                                <tr>
+                                  <td class="p-custom mobile-heading" style="text-align: center;" >
+                                    <font style="font-family: Arial;font-size:14px;line-height:20px;color:#444;font-weight:lighter;">But what about your</font>
+                                     <font style="text-align:center;font-family:Arial,sans-serif;font-size:14px;line-height:20px;color:#f38c1e;font-weight: bold;">second car's renewal date?
+                                     </font>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                           </tr> 
+                        </tbody>
+                     </table>
+                    </td>
+                </tr>
+              </table>
+           </td>
+       </tr>
+       <!-- First six months calender row:START -->
+        <tr>
+          <td align="center" valign="top">
+            <table align="center" border="0" cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td height="5" style="height: 5px;"></td>
+                </tr>
+                <tr>
+                  <td width="10" style="width: 10px;" class="mobile-padding"></td>
+                  <td align="center" valign="top">
+                    <table cellspacing="0" cellpadding="0" border="0" bgcolor="#BBDDF8" style="padding:10px 10px 0px 10px;">
+                      <tbody> 
+                        <tr>
+                          <!-- Column : BEGIN -->
+                          <td class="full-wid-center">
+                            <table cellspacing="0" cellpadding="0" border="0" bgcolor="#BBDDF8" height="auto">
+                              <tbody>
+                                <tr>
+                                  <td style="text-align: center;">
+                                    <table align="left" cellspacing="0" cellpadding="0" border="0" >
+                                      <tbody>
+                                        <tr valign="middle">
+                                          <td style="text-align: center;">
+                                            <div style="width: 200px; height: auto;">
+                                              <table align="left" border="0" cellpadding="5" cellspacing="0" width="100%">
+                                                <tbody>  
+                                                  <tr>
+                                                    <td align="center">
+                                                      <table align="center" border="0" cellpadding="5" cellspacing="0" width="100%">
+                                                        <tr>
+                                                          <td bgcolor="#ffffff" align="center">
+                                                            <a href="http://pub.email.esure.com/test?january" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #0072af;text-decoration: none; text-decoration: none;" target="_blank">Jan</a>
+                                                          </td>
+                                                        </tr>
+                                                      </table>
+                                                    </td>
+                                                    <td align="center">
+                                                      <table align="center" border="0" cellpadding="5" cellspacing="0" width="100%">
+                                                        <tr>
+                                                          <td bgcolor="#ffffff" align="center">
+                                                            <a href="http://pub.email.esure.com/test?february" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #0072af;text-decoration: none; " target="_blank">Feb</a>
+                                                          </td>
+                                                        </tr>
+                                                      </table>
+                                                    </td>
+                                                    <td align="center">
+                                                      <table align="center" border="0" cellpadding="5" cellspacing="0" width="100%">
+                                                        <tr>
+                                                          <td bgcolor="#ffffff" align="center">
+                                                            <a href="http://pub.email.esure.com/test?march" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #0072af;text-decoration: none;" target="_blank">Mar</a>
+                                                          </td>
+                                                        </tr>
+                                                      </table>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <!-- Column : END -->
+                          <!-- Column : BEGIN -->
+                          <td class="full-wid-center">
+                            <table cellspacing="0" cellpadding="0" border="0" bgcolor="#BBDDF8" height="auto">
+                              <tbody>
+                                <tr>
+                                  <td style="text-align: center;">
+                                    <table align="left" cellspacing="0" cellpadding="0" border="0">
+                                      <tbody>
+                                        <tr valign="middle">
+                                          <td style="text-align: center;">
+                                            <div style="width: 200px; height:auto;">
+                                              <table align="left" border="0" cellpadding="5" cellspacing="0" width="100%">
+                                                <tbody>  
+                                                  <tr>
+                                                    <td align="center">
+                                                      <table align="center" border="0" cellpadding="5" cellspacing="0" width="100%">
+                                                        <tr>
+                                                          <td bgcolor="#ffffff" align="center">
+                                                            <a href="http://pub.email.esure.com/test?april" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #0072af;text-decoration: none; text-decoration: none;" target="_blank">Apr</a>
+                                                          </td>
+                                                        </tr>
+                                                      </table>
+</td>
+                                                    <td align="center">
+                                                      <table align="center" border="0" cellpadding="5" cellspacing="0" width="100%">
+                                                        <tr>
+                                                          <td bgcolor="#ffffff" align="center">
+                                                            <a href="http://pub.email.esure.com/test?may" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #0072af;text-decoration: none; " target="_blank">May</a>
+                                                          </td>
+                                                        </tr>
+                                                      </table>
+                                                    </td>
+                                                    <td align="center">
+                                                      <table align="center" border="0" cellpadding="5" cellspacing="0" width="100%">
+                                                        <tr>
+                                                          <td bgcolor="#ffffff" align="center">
+                                                            <a href="http://pub.email.esure.com/test?june" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #0072af;text-decoration: none;" target="_blank">Jun</a>
+                                                          </td>
+                                                        </tr>
+                                                      </table>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </div>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <!-- Column : END -->
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+       
+        <!-- Second six months calender row:START -->
+        <tr>
+          <td>
+            <table align="center" border="0" cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td width="10" style="width: 10px;" class="mobile-padding"></td>
+                  <td align="center" valign="top">
+                  <table cellspacing="0" cellpadding="0" border="0" bgcolor="#BBDDF8" style="padding:0px 10px 10px 10px;">
+                    <tbody>
+                      <tr>
+                        <!-- Column : BEGIN -->
+                        <td class="full-wid-center">
+                          <table cellspacing="0" cellpadding="0" border="0" bgcolor="#BBDDF8">
+                            <tbody>
+                              <tr>
+                                <td style="text-align: center;">
+                                  <table align="right" cellspacing="0" cellpadding="0" border="0">
+                                    <tbody>
+                                      <tr valign="middle">
+                                        <td style="text-align: center;">
+                                          <div style="width: 200px;">
+                                            <table align="center" border="0" cellpadding="5" cellspacing="0" width="100%">
+                                              <tbody>  
+                                                <tr>
+                                                  <td align="center">
+                                                    <table align="center" border="0" cellpadding="5" cellspacing="0" width="100%">
+                                                      <tr>
+                                                        <td bgcolor="#ffffff" align="center">
+                                                          <a href="http://pub.email.esure.com/test?july" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #0072af;text-decoration: none; text-decoration: none;" target="_blank">Jul</a>
+                                                        </td>
+                                                      </tr>
+                                                    </table>
+                                                  </td>
+                                                  <td align="center">
+                                                    <table align="center" border="0" cellpadding="5" cellspacing="0" width="100%">
+                                                      <tr>
+                                                        <td bgcolor="#ffffff" align="center">
+                                                          <a href="http://pub.email.esure.com/test?august" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #0072af;text-decoration: none; " target="_blank">Aug</a>
+                                                        </td>
+                                                      </tr>
+                                                    </table>
+                                                  </td>
+                                                  <td align="center">
+                                                    <table align="center" border="0" cellpadding="5" cellspacing="0" width="100%">
+                                                      <tr>
+                                                        <td bgcolor="#ffffff" align="center">
+                                                          <a href="http://pub.email.esure.com/test?september" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #0072af;text-decoration: none;" target="_blank">Sep</a>
+                                                        </td>
+                                                      </tr>
+                                                    </table>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <!-- Colußmn : END -->
+                        <!-- Column : BEGIN -->
+                        <td class="full-wid-center">
+                          <table cellspacing="0" cellpadding="0" border="0" bgcolor="#BBDDF8">
+                            <tbody>
+                              <tr>
+                                <td style="text-align: center;">
+                                  <table align="right" cellspacing="0" cellpadding="0" border="0">
+                                    <tbody>
+                                      <tr valign="middle">
+                                        <td style="text-align: center;">
+                                          <div style="width: 200px;">
+                                            <table align="center" border="0" cellpadding="5" cellspacing="0" width="100%">
+                                              <tbody>  
+                                                <tr>
+                                                  <td align="center">
+                                                    <table align="center" border="0" cellpadding="5" cellspacing="0" width="100%">
+                                                      <tr>
+                                                        <td bgcolor="#ffffff" align="center">
+                                                          <a href="http://pub.email.esure.com/test?october" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #0072af;text-decoration: none; text-decoration: none;" target="_blank">Oct</a>
+                                                        </td>
+                                                      </tr>
+                                                    </table>
+                                                  </td>
+                                                  <td align="center">
+                                                    <table align="center" border="0" cellpadding="5" cellspacing="0" width="100%">
+                                                      <tr>
+                                                        <td bgcolor="#ffffff" align="center">
+                                                          <a href="http://pub.email.esure.com/test?november" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #0072af;text-decoration: none; " target="_blank">Nov</a>
+                                                        </td>
+                                                      </tr>
+                                                    </table>
+                                                  </td>
+                                                  <td align="center">
+                                                    <table align="center" border="0" cellpadding="5" cellspacing="0" width="100%">
+                                                      <tr>
+                                                        <td bgcolor="#ffffff" align="center">
+                                                          <a href="http://pub.email.esure.com/test?december" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: bold; color: #0072af;text-decoration: none;" target="_blank">Dec</a>
+                                                        </td>
+                                                      </tr>
+                                                    </table>
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                        <!-- Column : END -->
+                      </tr>
+                    </tbody>
+                  </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="5" style="height: 5px;"></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+       
+        <tr>
+          <td height="20" style="height: 20px;"></td>
+        </tr>
+      </tbody>
+    </table>
+    </td>
+    <td width="10" style="width: 10px;" class="mobile-padding">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="20" style="height: 20px;"></td>
+  </tr>
+ </tbody>
+</table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_03">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_04">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_05">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_06">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_07">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_08">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_09">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_10">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_11">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_12">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="center" valign="top">
+                            <custom type="content" name="Content_13">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_14">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_15">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_16">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_17">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_18">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_19">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_20">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_21">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_22">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_23">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_24">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_25">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_26">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_27">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_28">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_29">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="left" valign="top">
+                            <custom type="content" name="Content_30">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <table cellpadding="0" cellspacing="0"  width="100%" class="DashedBorder">
+                              <tr align="center" valign="top">
+                                <td>
+                                  <table cellpadding="0" cellspacing="0">
+                                    <tr>
+                                      <td style="line-height: 14px;text-align:left;"><a href="%%unsub_center_url%%" title="Click here to unsubscribe" style="text-decoration: none !important; border: none !important;"><font style="font-family:'MuseoSansRounded-300', sans-serif;font-size:9px;line-height:14px;color:#f48e1e;text-decoration:underline !important;font-weight:normal">Click here</font></a>&nbsp;<font style="font-family:'MuseoSansRounded-300', sans-serif;font-size:9px;line-height:14px;color:#0072af;text-decoration:none !important;font-weight:normal">to unsubscribe from further marketing and promotional emails from esure.</font>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td height="10" style="font-size:15px;line-height:1px">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td style="line-height: 14px;text-align:left;"><font style="font-family: Arial, sans-serif;font-size:10px;line-height:14px;color:#0072af;text-decoration:none !important;font-weight:normal">esure Home and Motor Insurance is arranged and administered by esure Services Limited who are registered in England and Wales number 2135610 at The Observatory, Reigate, Surrey, RH2 0SG, and who are authorised and regulated by the Financial Conduct Authority number 312063.  The insurance is underwritten by esure Insurance Limited who are authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority, number 203350. Calls may be recorded for training and monitoring purposes. Insurance is not available in Northern Ireland or the Channel Islands.  Subject to normal acceptance criteria.</font>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td height="10" style="font-size:15px;line-height:1px">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td style="line-height: 14px;text-align:left;"><font style="font-family: Arial, sans-serif;font-size:10px;line-height:14px;color:#0072af;text-decoration:none !important;font-weight:normal">Family Legal Protection is underwritten by AmTrust Europe Limited (Financial Services no. 202189). Home Emergency and Pest cover are underwritten by Inter Partner Assistance UK (IPA) (Financial Services no. 202664) which is fully owned by the AXA Assistance Group.</font>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td style="line-height: 14px;text-align:left;"><font style="font-family: Arial, sans-serif;font-size:10px;line-height:14px;color:#0072af;text-decoration:none !important;font-weight:normal">Breakdown cover is provided by RAC Motoring Services (Financial Services Register no. 310208) and RAC Insurance Ltd (Financial Services Register no. 202737).</font>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        <!-- end -->
+        </td>
+      <td align="right" class="desktop-only">&nbsp;</td>
+    </tr>
+      <!-- Space at the bottom : BEGIN -->
+      <tr>
+        <td height="20" style="height: 15px;"></td>
+      </tr>
+      <!-- Space at the bottom : END -->
+  </tbody>
+</table>
+
+
+
+<custom name="opencounter" type="tracking"></custom>
+
+</body>
+</html>
